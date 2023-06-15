@@ -12,4 +12,3 @@ public class Euro extends Currency {
         return symbol;
     }
 }
-

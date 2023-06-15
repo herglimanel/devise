@@ -12,4 +12,9 @@ public class Currency {
     public double getAmount() {
         return amount;
     }
+
+	public String getSymbol() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
