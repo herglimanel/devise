@@ -4,6 +4,13 @@ package projetMonnaie;
 
 public class Currency {
     protected double amount;
+    protected String symbol;
+    
+    
+    public Currency(String symbol, double amount) {
+        this.symbol = symbol;
+        this.amount = amount;
+    }
 
     public Currency(double amount) {
         this.amount = amount;

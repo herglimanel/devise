@@ -11,9 +11,9 @@ public class Main {
         System.out.println("Montant en Dollars: " + dollars.getAmount() + " " + dollars.getSymbol());
 
         // Conversion
-        convertToCurrency(dinars, new EuroConverter());
-        convertToCurrency(dinars, new DollarsConverter());
-        convertToCurrency(dollars, new EuroConverter());
+        convertToCurrency(dinars, sourceCurrency -> new Euro(sourceCurrency.getAmount() * 0.31));
+        convertToCurrency(dinars, sourceCurrency -> new Dollars(sourceCurrency.getAmount() * 0.36));
+        convertToCurrency(dollars, sourceCurrency -> new Euro(sourceCurrency.getAmount() * 0.85));
     }
 
     public static void convertToCurrency(Currency sourceCurrency, CurrencyConverter converter) {
